@@ -1,0 +1,95 @@
+<!DOCTYPE html> <!-- -->
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-widht, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Тестовое задание</title>
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous"> <!--Подключение bootstrap-->
+  <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+  <script src="https://use.fontawesome.com/releases/v5.0.8/js/all.js"></script> <!--Подключение иконок-->
+  <link rel="stylesheet" href="css/main.css"> <!--Подключение css из папки-->
+
+</head>
+
+<body>
+
+  <nav class="navbar navbar-expand-md navbar-light bg-light sticky-top"> <!--Начало навигационной панели (шапки)-->
+    <div class="container-fluid">
+      <a href="#" class="navbar-brad"><img src="image/logo.png"></a> <!--Логотип из картинки Дорри-->
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarResponsive"> <!--Создание
+        кнопки для отображения меню на телефоне-->
+        <span class="navbar-toggler-icon"></span> <!--Иконка для кнопки отображения меню на телефоне-->
+      </button>
+      <div class="collapse navbar-collapse" id="navbarResponsive"> <!--Создание самого меню-->
+        <ul class="navbar-nav ml-auto"> <!--Список меню-->
+          <li class="nav-item  active">
+            <a href="#" class="nav-link">Информация о парке</a>
+          </li>
+          <li class="nav-item">
+            <a href="cart.html" class="nav-link">Посмотреть на карте</a>
+          </li>
+        </ul> <!--Конец списка-->
+      </div> <!--Конец меню-->
+    </div>
+  </nav> <!--Конец навигационной панели (шапки)-->
+
+  <div class="carousel slide" data-ride="carousel" id="slides"> <!--Блок слайдера-->
+    <ul class="carousel-indicators"> <!--Создание переходов между сладами (3 полоски переходов внизу)-->
+      <li data-target="#slides" data-slide-to="0" class="active"></li> <!--Переход к 1-ому слайдеру-->
+      <li data-target="#slides" data-slide-to="1"></li> <!--Переход к 2-ому слайдеру-->
+      <li data-target="#slides" data-slide-to="2"></li> <!--Переход к 3-ому слайдеру-->
+    </ul>
+    <div class="carousel-inner"> <!--Добавление картинок-->
+      <div class="carousel-item active"> <!--Добавление картинки 1-->
+        <img src="image/park1.jpg">
+        <div class="carousel-caption">
+          <h1 class="display2">Студенческий парк Донского государственного технического университета</h1> <!--Добавление текста к картинке 1-->
+          <h3>имени Л.В. КРАСНИЧЕНКО</h3>
+        </div>
+      </div>
+      <div class="carousel-item"> <!--Добавление картинки 2-->
+        <img src="image/park2.jpg">
+      </div>
+      <div class="carousel-item"> <!--Добавление картинки 3-->
+        <img src="image/park3.jpg">
+      </div> <!--Коец добавления картинок-->
+    </div>
+  </div> <!--Конец блока слайдера-->
+
+
+  <div class="container-fluid"> <!--Создание 1-го блока сайта-->
+    <div class="row text-center alert">
+      <div class="col-12">
+        <h1 class="display-4">История парка</h1>
+      </div>
+      <hr> <!--Горизонтальная линия-->
+      <div class="col-12">
+        <p class="lead">Парк был высажен учащейся молодежью Ростова в 1910 году. В предвоенные годы и до 1947 года парк назывался «Андреевская роща». Этот парк в годы перед Великой Отечественной войной был любимым местом отдыха ростовчан. Главный вход в него был расположен со стороны Ворошиловского проспекта, там, где сейчас находится вход в главный корпус ДГТУ. Парк переименовывался несколько раз и в 2008 году получил имя, которое он носит и в настоящее время – парк ДГТУ имени Леонида Васильевича Красниченко. В центре парка установлен памятник преподавателям, сотрудникам и студентам РМИ, защитившим Родину в годы ВОВ. На территории парка также расположены спортивные площадки, футбольное поле, бассейн.</p>
+      </div>
+    </div>
+  </div> <!--Конец 1-го блока сайта-->
+
+
+  <footer class="container-fluid"> <!--Футер сайта-->
+    <div class="container-fluid">
+      <div class="row padding text-center">
+        <div class="col-12">
+          <h2>Наши контакты</h2>
+        </div>
+        <div class="col-12 social padding">
+          <a href="#"><i class="fab fa-twitter"></i></a>
+          <a href="#"><i class="fab fa-instagram"></i></a>
+          <a href="#"><i class="fab fa-youtube"></i></a>
+          <a href="#"><i class="fab fa-facebook"></i></a>
+          <a href="#"><i class="fab fa-google-plus-g"></i></a>
+        </div>
+      </div>
+    </div>
+  </footer> <!--Конец футера сайта-->
+
+</body>
+
+</html>

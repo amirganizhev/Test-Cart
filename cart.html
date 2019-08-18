@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Парк ДГТУ</title>
+
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.0/normalize.min.css">
+    <link rel="stylesheet" href="demo.css" />
+
+    <!-- Dependency to Leaflet -->
+    <link rel="stylesheet" href="http://cdn.leafletjs.com/leaflet-0.7/leaflet.css" />
+    <script src="http://cdn.leafletjs.com/leaflet-0.7/leaflet.js"></script>
+
+    <!-- Dependency to Leaflet Draw -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/leaflet.draw/0.3.2/leaflet.draw.css"/>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/leaflet.draw/0.3.2/leaflet.draw.js"></script>
+
+    <!-- Files from current project -->
+    <link rel="stylesheet" href="leaflet.measurecontrol.css" />
+    <script src="leaflet.measurecontrol.js"></script>
+
+
+    <!-- MousePosition -->
+    <link rel="stylesheet" href="L.Control.MousePosition.css" />
+    <script src="L.Control.MousePosition.js"></script>
+
+    <!-- Backbone.js -->
+    <script src="backbone.js"></script>
+
+    <script src="bacmar/backbone.js"></script>
+    <script src="bacmar/backbone.marionette.js"></script>
+    <script src="bacmar/backbone.marionette.min.js"></script>
+    <script src="bacmar/backbone.radio.js"></script>
+    <script src="bacmar/jquery.js"></script>
+    <script src="bacmar/json2.js"></script>
+    <script src="bacmar/underscore.js"></script>
+    
+
+</head>
+<body>
+
+
+
+      <div id="map"></div>
+ 
+    <script type="text/javascript">
+        var osm = L.tileLayer('http://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
+            attribution: 'Map data &copy; 2013 OpenStreetMap contributors',
+        });
+
+        var map = L.map('map')
+                   .setView([47.2413428, 39.71049929], 16)
+                   .addLayer(osm);
+
+        L.Control.measureControl().addTo(map);
+        L.control.mousePosition().addTo(map);
+        
+
+  var pIcon = L.icon({
+  iconUrl: 'image/park.png',
+
+  iconSize:     [25, 25],
+  iconAnchor:   [25, 25],
+  });
+
+  var aIcon = L.icon({
+  iconUrl: 'image/atlet.png',
+
+  iconSize:     [25, 25],
+  iconAnchor:   [25, 25],
+  });
+
+  var kIcon = L.icon({
+  iconUrl: 'image/krest.png',
+
+  iconSize:     [25, 25],
+  iconAnchor:   [25, 25],
+  });
+
+  var oIcon = L.icon({
+  iconUrl: 'image/obshaga.png',
+
+  iconSize:     [25, 25],
+  iconAnchor:   [25, 25],
+  });
+
+  var pamIcon = L.icon({
+  iconUrl: 'image/pamatnik.png',
+
+  iconSize:     [25, 25],
+  iconAnchor:   [25, 25],
+  });
+
+        L.marker([47.2418636, 39.71057975], {icon: pIcon}).addTo(map)
+        .bindPopup("<b>Парк ДГТУ</b><br />Студенческий парк").openPopup();
+
+        L.marker([47.24098734, 39.70939207], {icon: aIcon}).addTo(map)
+        .bindPopup("<b>Манеж</b><br />Легкоатлетический манеж").openPopup();
+
+        L.marker([47.23925664, 39.71110868], {icon: kIcon}).addTo(map)
+        .bindPopup("<b>Церковь</b><br />Храм святой великомученицы Татьяны").openPopup();
+
+        L.marker([47.23936154, 39.71271586], {icon: oIcon}).addTo(map)
+        .bindPopup("<b>Общежитие ДГТУ</b><br />Студенческое общежитие").openPopup();
+
+        L.marker([47.23925664, 39.71040702], {icon: pamIcon}).addTo(map)
+        .bindPopup("<b>Памятник</b><br />Студентам и работникам РИСХМ").openPopup();
+
+        var popup = L.popup();
+
+    </script>
+
+    <script type="text/javascript">
+        function toggleMenu () {
+            var toggle = document.querySelector('.menu-toggle');
+            var menu = document.querySelector('.menu');
+            toggle.classList.toggle('close');
+            menu.classList.toggle('closed');
+        }
+
+        function initMenu () {
+            var toggle = document.querySelector('.menu-toggle');
+            toggle.addEventListener('click', toggleMenu);
+        }
+
+        initMenu();
+    </script>
+
+<div id="root-element"></div>
+
+  
+
+</body>
+</html>
