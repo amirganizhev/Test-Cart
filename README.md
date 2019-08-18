@@ -42,10 +42,4 @@ Changelog
 
 See [CHANGELOG.md](./CHANGELOG.md).
 
-Authors
--------
 
-* Gilles Bassière
-* Alexandra Janin
-
-[![Makina Corpus](http://depot.makina-corpus.org/public/logo.gif)](http://makinacorpus.com)
